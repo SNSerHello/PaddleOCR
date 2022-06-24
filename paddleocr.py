@@ -15,6 +15,7 @@
 import os
 import sys
 import importlib
+import json
 
 __dir__ = os.path.dirname(__file__)
 
@@ -438,7 +439,7 @@ class PaddleOCR(predict_system.TextSystem):
             params.rec_char_dict_path = str(
                 Path(__file__).parent / rec_model_config['dict_path'])
 
-        logger.debug(params)
+        logger.debug(json.dumps(vars(params), indent=4))
         # init det_model and rec_model
         super().__init__(params)
 

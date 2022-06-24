@@ -1,5 +1,10 @@
 English | [简体中文](README_ch.md)
 
+## 制作wheel文件
+```
+$ python3 setup.py bdist_wheel --universal
+```
+
 <p align="center">
  <img src="./doc/PaddleOCR_log.png" align="middle" width = "600"/>
 <p align="center">
